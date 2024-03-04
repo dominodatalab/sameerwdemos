@@ -21,17 +21,18 @@ class DominoMLflowUtilities:
         initialized = True
         self.t1 = None
         
-    def init(self,experiment_name,config=None):    
+    def init(self,experiment_name,config=None,run_tags={}):    
         mlflow.set_experiment(experiment_name)
         run = mlflow.active_run()
         print(f"Checking for active runs, Active Run= {run}")
         if run:
             print("Ending active prior to starting new run. Ending run_id: {}".format(run.info.run_id))     
             mlflow.end_run()
-        self.run = mlflow.start_run()
+        self.run = mlflow.start_run(tags=run_tags)
         print("Started new run with run_id: {}".format(self.run.info.run_id))     
         if config:
-            mlflow.log_params(vars(config))
+            print(config)
+            #mlflow.log_params(vars(config))
         self.t1 = threading.Thread(target=publish_utilization_metrics, args=(self.run.info.run_id,1))
         self.t1.start()
         
