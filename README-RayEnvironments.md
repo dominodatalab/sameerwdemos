@@ -19,6 +19,8 @@ RUN pip install torchvision
 RUN pip install GPUtil
 RUN pip install torch torchvision tensortrade
 RUN pip install tblib
+RUN pip install tensorflow
+RUN pip install keras
 RUN pip install nvidia-smi
 USER ubuntu
 ```
@@ -45,6 +47,9 @@ RUN pip install torchvision
 RUN pip install GPUtil
 RUN pip install torch torchvision tensortrade
 RUN pip install tblib
+RUN pip install tensorflow
+RUN pip install keras
 RUN pip install nvidia-smi
+
 RUN usermod -u 12574 ray
 ```
