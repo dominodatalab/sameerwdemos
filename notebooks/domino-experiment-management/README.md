@@ -12,7 +12,7 @@ execute the code quickly run the following:
 
 ```
 ./create-pytorch-conda.sh 
-/opt/conda/envs/pytorch/bin/python train.py
+/opt/conda/envs/pytorch/bin/python /mnt/code/notebooks/domino-experiment-management/train.py
 ```
 
 

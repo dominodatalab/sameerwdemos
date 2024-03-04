@@ -101,13 +101,10 @@ if __name__ == "__main__":
     if not run_id:
         result = start_stub_job(domino_tracking_uri,project_owner,project_name,api_key,job_name)
         print(result)
-        run_id=result['runId']
-
+        os.environ['DOMINO_RUN_ID'] = result['runId']
     #You can re-use and existing run-id for the project/user combination
     #run_id = '6595f16d12b6f32d73f22bd6'
-    os.environ['DOMINO_USER_API_KEY'] = api_key
-    #os.environ['MLFLOW_TRACKING_URI'] = domino_tracking_uri
-    os.environ['DOMINO_RUN_ID'] = run_id
+    
     main()
 
 
