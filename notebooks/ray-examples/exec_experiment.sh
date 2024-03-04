@@ -1,4 +1,4 @@
-export data_folder=${DOMINO_DATASETS_DIR}/${DOMINO_PROJECT_NAME}
+export data_sets_folder=${DOMINO_DATASETS_DIR}/${DOMINO_PROJECT_NAME}
 export num_epochs=5
 export num_trials=5
 export cpus_per_trial=1
