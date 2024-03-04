@@ -24,7 +24,7 @@ There are three basic notebooks included in this repo to demonstrate the use Exp
 
 To clear all notebooks before commit run the following command
 ```
-jupyter nbconvert --ClearOutputPreprocessor.enabled=True --inplace *.ipynb
+jupyter nbconvert --clear-output --inplace notebooks/*/*.ipynb
 ```
 
 
