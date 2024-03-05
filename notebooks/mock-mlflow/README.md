@@ -45,6 +45,6 @@ python mock-train.py --num_experiments 2 --num_runs 4
 To generate multiple experiments with nested runs:
 
 ```
-python mock-train.py --num_experiments 2 --num_runs 4 nested_runs True
+python mock-train.py --num_experiments 2 --num_runs 4 --nested_runs True
 ```
 
